@@ -1,0 +1,93 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    height: 20%;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+
+main {
+    height: 80%;
+}
+
+:root {
+    --start-color: #ff0000;
+    --end-color: #00ff00;
+}
+
+#tiers {
+    background: linear-gradient(to bottom, var(--start-color), var(--end-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 120%;
+    overflow: auto;
+}
+
+.tier {
+    text-align: center;
+    border: 1px solid #333;
+    padding: 10px;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    height: calc(100% / 6);
+    width: 100%;
+    overflow: auto;
+}
+
+#soundtracks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 40%;
+    overflow: auto;
+}
+
+.soundtrack {
+    color: white;
+    font-size: 12px;
+    width: 90px;
+    height: 90px;
+    border: 1px solid #000000;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.soundtrack::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.soundtrack p {
+    position: relative;
+    z-index: 2;
+}
